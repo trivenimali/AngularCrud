@@ -1,0 +1,62 @@
+<h1 style="text-align:center"></h1>
+<div class="register">
+  <h1 class="register-header">Register</h1>
+  <form [formGroup]="registerForm" class="register-container" (ngSubmit)="register()">
+
+    <p [ngClass]="{ 'has-error': isSubmitted && f.name.errors }">
+      <input type="name" placeholder="Name" formControlName="name">
+    </p>
+
+    <div *ngIf="isSubmitted && f.name.errors">
+      <div *ngIf="f.name.errors.required">Name is required</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && f.email.errors }">
+      <input type="email" type="email" placeholder="Email" formControlName="email">
+    </p>
+
+    <div *ngIf="isSubmitted && f.email.errors && f.email.invalid">
+
+      <div *ngIf="f.email.errors.required">Email is required</div>
+      <div *ngIf="f.email.errors.email">Please enter valid email</div>
+      <!-- <div *ngIf="f.email.errors.pattern && !f.email.errors.email">Invalid email.</div>-->
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && f.password.errors }">
+      <input type="password" type="password" placeholder="Password" formControlName="password">
+    </p>
+
+    <div *ngIf="isSubmitted && f.password.errors && f.password.invalid">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+      <div *ngIf="f.password.errors.maxLength">Password length must be a 8 characters long</div>
+      <div *ngIf="f.password.errors.pattern">Password must contain @</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && f.password.errors }">
+      <!-- <input type="password" formControlName="confirmPassword" placeholder="Confirm Password"> -->
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password">
+      <!-- [ngClass]="{ 'has-error': isSubmitted && f.confirmPassword.touched && confirmPassword.invalid }
+            [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" -->
+    </p>
+
+    <div *ngIf="isSubmitted && f.confirmPassword.errors && f.confirmPassword.invalid">
+      <div *ngIf=" !f.confirmPassword.valid && f.confirmPassword.errors"></div>
+      <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+      <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+    </div>
+
+    <!-- <div *ngIf="isSubmitted && f.confirmPassword.errors" >
+            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+        </div> -->
+
+    <p>
+      <!---->
+      <button (click)="register()">Register</button>
+
+    </p>
+
+    <p class="link">Already have an account?<a routerLink="/login">Login</a></p>
+
+  </form>
+</div>

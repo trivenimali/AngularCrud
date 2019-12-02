@@ -1,0 +1,133 @@
+@import  url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+h1{
+    color:#7700FF;
+}
+
+.register{
+    width: 400px;
+    margin: 16px auto;
+    font-size: 16px;
+}
+
+.register-header, .register-header p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.register-triangle{
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: (15, 66, 107);
+}
+
+.register-header{
+    background: 12, 77, 129;
+    padding: 14px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7700FF;
+}
+
+.register-container{
+    background: #ebebeb;
+    padding: 4px;
+}
+
+.register p{
+    padding:12px;
+}
+
+.register input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 12px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .register input[type="name"],
+  .register input[type="contact"],
+  .register input[type="email"],
+  .register input[type="password"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+  
+  .register input[type="name"]:focus,
+  .register input[type="number"]:focus,
+  .register input[type="email"]:focus,
+  .register input[type="password"]:focus {
+    border-color: #888;
+  }
+  
+  .register input[type="submit"] {
+    background:#7700FF;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .register input[type="submit"]:hover {
+    background: rgb(124, 191, 247);
+  }
+  
+  .register input[type="submit"]:focus {
+    border-color: rgb(73, 155, 238);
+  }
+
+  .has-error input[type="name"],
+  .has-error input[type="contact"],
+  .has-error input[type="email"],
+  .has-error input[type="password"] {
+      border-color: rgb(216, 12, 12);
+      color: rgb(230, 14, 14);
+  }
+
+  p button{
+    background: #7700FF;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    border: white 2px;
+    border-radius: 4px; 
+
+  }
+
+   .cancel{
+    background: whitesmoke;
+  }
+
+  .link{
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  p a{
+    
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    margin: inherit;
+    
+
+  }
+
+  div div{
+    color:red;
+    font-size: 12px;
+    margin-left: 10px;
+  }

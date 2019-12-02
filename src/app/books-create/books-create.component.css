@@ -1,0 +1,29 @@
+.addBook{
+  background: rgb(72, 71, 73);
+  
+}
+input{
+  color:white
+}
+textarea{
+  color:white
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    
+  }
+ 
+  .example-full-width {
+    width: 100%;
+    }
+  
+  .example-full-width:nth-last-child() {
+    margin-bottom: 10px;
+  }
+  
+  .button-row {
+    margin: 10px 0;
+    
+  }

@@ -1,0 +1,38 @@
+<div class="button-row">
+    <a mat-fab color="primary" (click)="booksDetails()"><mat-icon>show</mat-icon></a>
+  </div>
+  <form [formGroup]="booksForm" (ngSubmit)="onFormSubmit(booksForm.value)">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Title" formControlName="title"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!booksForm.get('title').valid && booksForm.get('title').touched">Please enter Book Title</span>
+      </mat-error>
+    </mat-form-field>
+    <!-- <mat-form-field class="example-full-width"> -->
+      <angular-editor formControlName="description" [config]="editorConfig"></angular-editor>
+             <!-- </angular-editor> -->
+      <!-- <mat-error> -->
+        <!-- <span *ngIf="!booksForm.get('description').valid && booksForm.get('description').touched">Please enter Book Description</span> -->
+      <!-- </mat-error> -->
+    <!-- </mat-form-field> -->
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Author" formControlName="author"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!booksForm.get('author').valid && booksForm.get('author').touched">Please enter Book Author</span>
+      </mat-error>
+    </mat-form-field>
+
+   <!--  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Price" formControlName="price"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span *ngIf="!booksForm.get('price').valid && booksForm.get('price').touched">Please enter Book Price</span>
+      </mat-error>
+    </mat-form-field> -->
+
+    <div class="button-row">
+      <button type="submit" (click)="toastMessage()" [disabled]="!booksForm.valid" mat-fab color="primary"><mat-icon>save</mat-icon></button>
+    </div>
+  </form>
