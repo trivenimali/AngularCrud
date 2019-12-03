@@ -73,7 +73,7 @@ editorConfig: AngularEditorConfig = {
       'title' : [null, Validators.required],
       'description' : [null, Validators.required],
       'author' : [null, Validators.required],
-      //'price':[null, Validators.required]
+     
     });
   }
 

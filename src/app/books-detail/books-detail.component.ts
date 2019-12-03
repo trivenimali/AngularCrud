@@ -16,6 +16,8 @@ export class BooksDetailComponent implements OnInit {
   ngOnInit() {
     this.getBookDetails(this.route.snapshot.params['id']);
   }
+
+  //get perticular book details
   getBookDetails(id) {
     this.cs.getBook(id)
       .subscribe(data => {
@@ -23,6 +25,8 @@ export class BooksDetailComponent implements OnInit {
         this.book = data;
       });
   }
+
+  //delete book
   deleteBook(id) {
     this.cs.deleteBooks(id)
       .subscribe(res => {

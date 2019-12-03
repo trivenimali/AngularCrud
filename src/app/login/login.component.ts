@@ -19,8 +19,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   uid: string;
-  user: any;
-
+  
 
   constructor(private authservice: AuthService, private router: Router,
     private formBuilder: FormBuilder, private firestore: AngularFirestore, private auth: AngularFireAuth) {
@@ -53,19 +52,9 @@ export class LoginComponent implements OnInit {
       console.log(res);
       localStorage.setItem('userUId', res.user.uid);
 
-      //console.log(userId);
+     
       this.router.navigate(['books']);
-      //     const user=
-      //     {
-      //     password: this.loginForm.value.password,
-      //     email:this.loginForm.value.email
-      //     }
-
-      //       this.authservice.userAdd(res.user.uid, user).then(res => {
-      //       console.log("success");
-      //       this.router.navigate(['/home']);
-
-      // });
+     
     },
 
       err => {

@@ -24,13 +24,6 @@
       </mat-error>
     </mat-form-field>
 
-   <!--  <mat-form-field class="example-full-width">
-      <input matInput placeholder="Price" formControlName="price"
-             [errorStateMatcher]="matcher">
-      <mat-error>
-        <span *ngIf="!booksForm.get('price').valid && booksForm.get('price').touched">Please enter Book Price</span>
-      </mat-error>
-    </mat-form-field> -->
 
     <div class="button-row">
       <button type="submit" (click)="toastMessage()" [disabled]="!booksForm.valid" mat-fab color="primary"><mat-icon>save</mat-icon></button>

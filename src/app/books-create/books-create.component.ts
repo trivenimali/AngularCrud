@@ -21,8 +21,7 @@ export class BooksCreateComponent implements OnInit {
 
   constructor(private router: Router, private cs: CrudService,
     private formBuilder: FormBuilder, private toast: ToastrService) {
-    /*  this.userId = localStorage.getItem('userUID');
-     console.log(this.userId);  */
+   
     var user = firebase.auth().currentUser;
     var uid;
     if (user != null) {
