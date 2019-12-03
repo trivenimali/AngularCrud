@@ -24,9 +24,7 @@ export class CrudService {
     console.log(user);
   }
 
-  /*  userAdd(uid, value) {
-     return this.firestore.collection('users').doc(uid).set(value);
-   } */
+
   getBooks(): Observable<any> {
     return new Observable((observer) => {
       this.ref.onSnapshot((querySnapshot) => {
@@ -74,19 +72,7 @@ export class CrudService {
     });
   }
 
-  /* let users = {} ;
-let loadedPosts = {};
-db.collection('users').get().then((results) => {
-  results.forEach((doc) => {
-    users[doc.id] = doc.data();
-  });
-  posts = db.collection('books').orderBy('timestamp', 'desc').limit(3);
-  posts.get().then((docSnaps) => {
-    docSnaps.forEach((doc) => {
-    loadedPosts[doc.id] = doc.data();
-    loadedPosts[doc.id].userName = users[doc.data().uid].name;
-  });
-}) */
+ 
 
   updateBooks(id: string, data): Observable<any> {
     return new Observable((observer) => {
