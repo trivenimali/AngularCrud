@@ -24,7 +24,7 @@ export class CrudService {
     console.log(user);
   }
 
-
+//get details of books
   getBooks(): Observable<any> {
     return new Observable((observer) => {
       this.ref.onSnapshot((querySnapshot) => {
@@ -46,6 +46,7 @@ export class CrudService {
     });
   }
 
+  //function for showing details of a book
   getBook(id: string): Observable<any> {
     return new Observable((observer) => {
       this.ref.doc(id).get().then((doc) => {
@@ -61,6 +62,7 @@ export class CrudService {
     });
   }
 
+  //adding books
   postBooks(data): Observable<any> {
     return new Observable((observer) => {
       this.ref.add(data).then((doc) => {
@@ -73,7 +75,7 @@ export class CrudService {
   }
 
  
-
+//updating book details
   updateBooks(id: string, data): Observable<any> {
     return new Observable((observer) => {
       this.ref.doc(id).set(data).then(() => {
@@ -82,6 +84,7 @@ export class CrudService {
     });
   }
 
+  //deleting book 
   deleteBooks(id: string): Observable<{}> {
     return new Observable((observer) => {
       this.ref.doc(id).delete().then(() => {
