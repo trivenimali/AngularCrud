@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-  firebaseConfig:{apiKey: "AIzaSyCCAfmXUqqBectVBSJzJdOVritkgk5Rge8",
-  authDomain: "crudop-9c9be.firebaseapp.com",
-  databaseURL: "https://crudop-9c9be.firebaseio.com",
-  projectId: "crudop-9c9be",
-  storageBucket: "crudop-9c9be.appspot.com",
-  messagingSenderId: "3232437873",
-  appId: "1:3232437873:web:40847293ea92ad876e6dd0",
-  measurementId: "G-KS572ZQGVP"}
+  firebaseConfig:{apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""}
 };
 
 
